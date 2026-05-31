@@ -1,0 +1,337 @@
+.employee-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.employee-list-container h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.employee-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.employee-card-header {
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-card-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.btn-assign {
+  flex: 1;
+  background: #9b59b6;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.btn-assign:hover {
+  background: #8e44ad;
+}
+
+.role-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.role-admin {
+  background: #e74c3c;
+}
+
+.role-hr {
+  background: #3498db;
+}
+
+.role-manager {
+  background: #2ecc71;
+}
+
+.role-employee {
+  background: #95a5a6;
+}
+
+.employee-card-body {
+  padding: 15px;
+}
+
+.employee-card-body p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.employee-card-body strong {
+  color: #333;
+}
+
+.employee-card-actions {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #eee;
+}
+
+.btn-payroll {
+  flex: 1;
+  background: #3498db;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.btn-payroll:hover {
+  background: #2980b9;
+}
+
+.btn-delete {
+  flex: 1;
+  background: #e74c3c;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.btn-delete:hover {
+  background: #c0392b;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 300px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  width: auto;
+  padding: 10px 20px;
+}
+
+/* EmployeeCard дополнительные стили */
+.employee-email {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin-top: 5px;
+}
+
+.employee-info-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.info-item {
+  flex: 1;
+}
+
+.info-item label {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 3px;
+}
+
+.info-item span {
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-details {
+  flex: 1;
+  background: #34495e;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.btn-details:hover {
+  background: #2c3e50;
+}
+
+/* Payroll Modal */
+.payroll-modal {
+  text-align: left;
+}
+
+.payroll-details {
+  margin: 20px 0;
+}
+
+.payroll-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.payroll-amount {
+  font-size: 20px;
+  color: #2ecc71;
+}
+
+.utilization-bar {
+  position: relative;
+  width: 150px;
+  height: 24px;
+  background: #ecf0f1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.utilization-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #3498db;
+  transition: width 0.3s;
+}
+
+.utilization-bar span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Details Modal */
+.details-modal {
+  width: 90%;
+  max-width: 500px;
+}
+
+.employee-details {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section h3 {
+  color: #2c3e50;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #3498db;
+}
+
+.detail-section p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.detail-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-section li {
+  padding: 8px;
+  background: #f8f9fa;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+/* Filters */
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.employee-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.filter-select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+}
+
+.no-results {
+  text-align: center;
+  padding: 50px;
+  color: #999;
+}

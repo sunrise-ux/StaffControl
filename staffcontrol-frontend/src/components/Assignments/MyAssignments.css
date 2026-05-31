@@ -1,0 +1,160 @@
+.my-assignments-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-assignments-header {
+  margin-bottom: 30px;
+}
+
+.my-assignments-header h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.employee-info-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.employee-info-card h3 {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+}
+
+.employee-info-card p {
+  margin: 8px 0;
+  opacity: 0.9;
+}
+
+.assignments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.assignment-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.assignment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.assignment-card-header {
+  padding: 15px;
+  background: #34495e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assignment-card-header h3 {
+  margin: 0;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-active {
+  background: #2ecc71;
+}
+
+.assignment-card-body {
+  padding: 15px;
+}
+
+.project-description {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.assignment-details {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-label {
+  color: #7f8c8d;
+}
+
+.detail-value {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.detail-value.payment {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.no-assignments {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 15px;
+  color: #7f8c8d;
+}
+
+.total-summary {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-summary h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.total-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.total-stat {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.total-stat span {
+  color: #7f8c8d;
+}
+
+.total-stat strong {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.total-payment {
+  color: #27ae60 !important;
+  font-size: 20px !important;
+}
